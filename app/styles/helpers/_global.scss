@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+}
+
+// scale with wrapper
+img{
+  display: block;
+  max-width: 100%;
+}
+
+body{
+  font-family: $primary-fonts;
+  line-height: 1;
+  color: white;
+}

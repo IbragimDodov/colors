@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Colors</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <body class="home-page">
+      <div class="wrapper">
+        <header class="header">
+          <div class="header__logo logo"><a class="logo__link" href="#"> <img class="logo__icon" src="../../images/logo.svg"></a></div>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"> <a class="nav__link" href="#">Продукты</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Цвета</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Вдохновение</a></li>
+              <li class="nav__item"> <a class="nav__link" href="#">Советы</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Найти магазин</a></li>
+            </ul>
+          </nav>
+          <div class="header__contacts contacts"><a class="contacts__phone" href="tel:+74952217769">+7 (495) 221-77-69</a><a class="contacts__order-call" href="#">Заказать звонок</a></div>
+          <div class="header__profile profile"> 
+            <ul class="profile__list">
+              <li class="profile__item"> <a><img src="../../images/heart.svg"></a></li>
+              <li class="profile__item"> <a><img src="../../images/profile.svg"></a></li>
+              <li class="profile__item"> <a><img src="../../images/search.svg"></a></li>
+              <button class="cartBtn"> <span class="cart-count">0</span></button>
+            </ul>
+          </div>
+        </header>
+        <div class="slider">
+          <div class="slide"><img class="slide__img" src="./images/slider/slide-1.jpg">
+            <div class="slide__content">
+              <h1 class="slide__content-title">Краски</h1>
+              <p class="slide__content-text">Идеально подходят для стен и других поверхностей.<br>Найди свой идеальный цвет!</p>
+            </div>
+            <button class="slide__arrow"> <img src="./images/arrow-next.svg"></button>
+            <div class="slide__dots-wrapp">
+              <div class="slide__dots">
+                <button class="slide__dot active"></button>
+                <button class="slide__dot"> </button>
+                <button class="slide__dot"> </button>
+                <button class="slide__dot"> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <main class="main"> 
+          <aside class="aside"> 
+            <div class="aside__filter-buttons"> 
+              <div class="toggle-button-wrapp">
+                <input class="toggle-button" id="toggle-button-1" type="checkbox" data-filter="new">
+                <label class="text" for="toggle-button-1">Новинки</label>
+              </div>
+              <div class="toggle-button-wrapp">
+                <input class="toggle-button" id="toggle-button-2" type="checkbox" data-filter="available">
+                <label class="text" for="toggle-button-2">Есть в наличии</label>
+              </div>
+              <div class="toggle-button-wrapp">
+                <input class="toggle-button" id="toggle-button-3" type="checkbox" data-filter="contract">
+                <label class="text" for="toggle-button-3">Контрактные</label>
+              </div>
+              <div class="toggle-button-wrapp">
+                <input class="toggle-button" id="toggle-button-4" type="checkbox" data-filter="exclusive">
+                <label class="text" for="toggle-button-4">Эксклюзивные</label>
+              </div>
+              <div class="toggle-button-wrapp">
+                <input class="toggle-button" id="toggle-button-5" type="checkbox" data-filter="sale">
+                <label class="text" for="toggle-button-5">Распродажа</label>
+              </div>
+            </div>
+          </aside>
+          <section class="main__section">
+            <div class="sort">
+              <div class="card-count">0 товаров</div>
+              <form class="form form__sort">
+                <div class="dropdown">
+                  <button class="dropdown__button">Сначала дорогие</button>
+                  <div class="dropdown__list-wrap"></div>
+                  <ul class="dropdown__list"> 
+                    <li class="dropdown__list-item" data-value="expensive">Сначала дорогие</li>
+                    <li class="dropdown__list-item" data-value="cheap">Сначала недорогие</li>
+                    <li class="dropdown__list-item" data-value="popular">Сначала популярные</li>
+                    <li class="dropdown__list-item" data-value="new">Сначала новые</li>
+                  </ul>
+                  <input class="dropdown__input input-hidden" type="text" name="selected-sort-item" value="">
+                </div>
+              </form>
+            </div>
+            <div class="cards"></div>
+          </section>
+        </main>
+        <section class="cart">
+          <div class="cart__shadow"></div>
+          <div class="cart__inner"> 
+            <div class="cart__header"> 
+              <h2 class="cart__header-title">Корзина</h2>
+              <button class="btn-close"></button>
+            </div>
+            <div class="cart__body"> 
+              <div class="cart__body-descr">
+                <h3 class="cart__body-title">4 товара</h3>
+                <button class="btn-clear">очистить список</button>
+              </div>
+              <div class="cart__body-cards"></div>
+            </div>
+            <div class="cart__footer">
+              <div class="count-block"><span>Итого</span><span class="totalCount">0 ₽</span></div>
+              <button class="orderBtn">Оформить заказ</button>
+            </div>
+          </div>
+        </section>
+        <footer class="footer"></footer>
+      </div>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script type="text/javascript" src="./scripts/main.js"></script>
+    </body>
+  </head>
+</html>

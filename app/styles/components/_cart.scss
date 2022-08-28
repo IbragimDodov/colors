@@ -1,0 +1,255 @@
+.cart {
+  display: none;
+  &__shadow {
+    z-index: 1;
+    position: absolute;
+    top: -110px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+  }
+  &__inner {
+    z-index: 2;
+    position: absolute;
+    top: -110px;
+    right: 0;
+    display: block;
+    width: 600px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+    margin-left: auto;
+    padding: 40px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    & > h2 {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 88%;
+      letter-spacing: -0.04em;
+      color: #1F2020;
+    }
+  }
+  &__body {
+    &-descr {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      & > h3 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 112%;
+        color: #1F2020;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    & > img {
+      width: 96px;
+      height: 96px;
+      display: block;
+    }
+    &-descr {
+      width: 165px;
+      margin-left: 6px;
+      & > h4 {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 112%;
+        letter-spacing: 0.02em;
+        color: #1F2020;
+        margin-bottom: 16px;
+      }
+    }
+    &-price {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: #1F2020;
+    }
+    &-buttons {
+      margin-right: 37px;
+      display: flex;
+      align-items: center;
+      & > span {
+        margin-left: 21px;
+        margin-right: 17px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: #1F2020;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    & > .count-block {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      & > span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: #1F2020;
+        margin-bottom: 6px;
+      }
+      & > span.totalCount {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        color: #1F2020;
+      }
+    }
+  }
+}
+
+.btn-close {
+  position: relative;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  cursor: pointer;
+  &::after {
+    content: url("../images/x.png");
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 11px;
+    left: 11px;
+    color: #1F2020;
+  }
+}
+
+.btn-clear {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 112%;
+  text-align: right;
+  color: #1F2020;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.btn-minus {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  border: none;
+  background: #F2F2F2;
+  border-radius: 4px;
+  cursor: pointer;
+  &::after {
+    content: url("../images/minus.svg");
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    color: #1F2020;
+  }
+}
+
+.btn-plus {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  border: none;
+  background: #F2F2F2;
+  border-radius: 4px;
+  cursor: pointer;
+  &::after {
+    content: url("../images/plus.svg");
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    color: #1F2020;
+  }
+}
+
+.btn-remove {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  &::after {
+    content: url("../images/remove-btn.svg");
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1F2020;
+  }
+}
+
+.btn-restore {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  &::after {
+    content: url("../images/repeat.svg");
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1F2020;
+  }
+}
+
+.orderBtn {
+  background: #7BB899;
+  border-radius: 4px;
+  padding: 20px 57px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2020;
+  border: none;
+  cursor: pointer;
+}
+
+.cartBtn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: #7BB899;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}

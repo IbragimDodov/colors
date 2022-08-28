@@ -1,0 +1,85 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #fff;
+  color: #000;
+
+  width: 100%;
+  padding: 38px 64px 40px;
+  // padding: 8rem 6.4rem;
+
+  // &__logo {
+  //   font-size: 3.2rem;
+  // }
+  &__nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 4rem;
+    & > li {
+      font-family: $secondary-fonts;
+      font-size: $normal-font-size;
+      font-weight: 400;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1F2020;
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &__phone {
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: #1F2020;
+    }
+    &__order-call {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      color: #1F2020;
+      opacity: 0.3;
+      margin-top: 2px;
+    }
+  }
+  .profile {
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__item {
+      margin-right: 28px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.cart-count {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F2020;
+  cursor: pointer;
+}

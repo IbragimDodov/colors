@@ -1,0 +1,32 @@
+header.header
+  .header__logo.logo
+    a.logo__link(href="#") 
+      img.logo__icon(src="../../images/logo.svg")
+  nav.header__nav.nav
+    ul.nav__list
+      li.nav__item 
+        a.nav__link(href="#") Продукты
+      li.nav__item
+        a.nav__link(href="#") Цвета
+      li.nav__item
+        a.nav__link(href="#") Вдохновение
+      li.nav__item 
+        a.nav__link(href="#") Советы
+      li.nav__item
+        a.nav__link(href="#") Найти магазин
+  .header__contacts.contacts
+    a.contacts__phone(href="tel:+74952217769") +7 (495) 221-77-69
+    a.contacts__order-call(href="#") Заказать звонок
+  .header__profile.profile 
+    ul.profile__list
+      li.profile__item 
+        a: img(src="../../images/heart.svg")
+      li.profile__item 
+        a: img(src="../../images/profile.svg")
+      li.profile__item 
+        a: img(src="../../images/search.svg")
+      //- li.profile__item.profile__item--cart 
+      //-   a: img(src="../../images/ellipse.svg")
+      //-   span.cart-count 4
+      button.cartBtn 
+        span.cart-count 0

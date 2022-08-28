@@ -1,0 +1,181 @@
+main.main 
+  aside.aside 
+    //- ul.aside__filter-buttons
+    //-   li.toggle-button-wrapp(data-filter="new")
+    //-     button.toggle-button.text Новинки
+    //-   li.toggle-button-wrapp(data-filter="new")
+    //-     button.toggle-button.text Есть в наличии
+    //-   li.toggle-button-wrapp(data-filter="new")
+    //-     button.toggle-button.text Контрактные
+    //-   li.toggle-button-wrapp(data-filter="new")
+    //-     button.toggle-button.text Эксклюзивные
+    //-   li.toggle-button-wrapp(data-filter="new")
+    //-     button.toggle-button.text Распродажа
+
+    .aside__filter-buttons 
+      .toggle-button-wrapp
+        input#toggle-button-1.toggle-button(type="checkbox")(data-filter="new")
+        label.text(for="toggle-button-1") Новинки
+      .toggle-button-wrapp
+        input#toggle-button-2.toggle-button(type="checkbox")(data-filter="available")
+        label.text(for="toggle-button-2") Есть в наличии
+      .toggle-button-wrapp
+        input#toggle-button-3.toggle-button(type="checkbox")(data-filter="contract")
+        label.text(for="toggle-button-3") Контрактные
+      .toggle-button-wrapp
+        input#toggle-button-4.toggle-button(type="checkbox")(data-filter="exclusive")
+        label.text(for="toggle-button-4") Эксклюзивные
+      .toggle-button-wrapp
+        input#toggle-button-5.toggle-button(type="checkbox")(data-filter="sale")
+        label.text(for="toggle-button-5") Распродажа
+
+  section.main__section
+    .sort
+      .card-count 0 товаров
+      form.form.form__sort
+        .dropdown
+          button.dropdown__button Сначала дорогие
+          .dropdown__list-wrap
+          ul.dropdown__list 
+            li.dropdown__list-item(data-value='expensive') Сначала дорогие
+            li.dropdown__list-item(data-value='cheap') Сначала недорогие
+            li.dropdown__list-item(data-value='popular') Сначала популярные
+            li.dropdown__list-item(data-value='new') Сначала новые
+          input(type="text" name="selected-sort-item" value="").dropdown__input.input-hidden
+
+    .cards
+      //- .card.cardId(data-sort="6000" data-popular="true" data-new="true" data-filter="new").new
+      //-   .card__image-block
+      //-     img(src="./images/cards/1.jpg", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 6000 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="4800" data-popular="false" data-new="true" data-filter="new").new
+      //-   .card__image-block
+      //-     img(src="./images/cards/2.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 4800 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="5290" data-popular="true" data-new="false" data-filter="available").available
+      //-   .card__image-block
+      //-     img(src="./images/cards/3.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 5290 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="2800" data-popular="true" data-new="false" data-filter="available").available
+      //-   .card__image-block
+      //-     img(src="./images/cards/4.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 2800 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="3400" data-popular="true" data-new="true" data-filter="new").new
+      //-   .card__image-block
+      //-     img(src="./images/cards/5.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 3400 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="6000" data-popular="false" data-new="true" data-filter="new").new
+      //-   .card__image-block
+      //-     img(src="./images/cards/6.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 6000 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="4800" data-popular="true" data-new="false" data-filter="available").available
+      //-   .card__image-block
+      //-     img(src="./images/cards/7.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 4800 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="5290" data-popular="true" data-new="true" data-filter="new").new
+      //-   .card__image-block
+      //-     img(src="./images/cards/8.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 5290 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="2800" data-popular="true" data-new="true" data-filter="exclusive").exclusive
+      //-   .card__image-block
+      //-     img(src="./images/cards/9.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 2800 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="3400" data-popular="false" data-new="false" data-filter="exclusive").exclusive
+      //-   .card__image-block
+      //-     img(src="./images/cards/10.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 3400 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="6000" data-popular="true" data-new="true" data-filter="contract").contract
+      //-   .card__image-block
+      //-     img(src="./images/cards/1.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 6000 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="4800" data-popular="true" data-new="true" data-filter="sale").
+      //-   .card__image-block
+      //-     img(src="./images/cards/2.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 4800 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="5290" data-popular="true" data-new="true" data-filter="contract").contract
+      //-   .card__image-block
+      //-     img(src="./images/cards/6.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 5290 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd
+      //- .card.cardId(data-sort="2800" data-popular="true" data-new="true" data-filter="sale").
+      //-   .card__image-block
+      //-     img(src="./images/cards/4.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 2800 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd 
+      //- .card.cardId(data-sort="3400" data-popular="false" data-new="false" data-filter="sale").
+      //-   .card__image-block
+      //-     img(src="./images/cards/8.png", alt="image").card__image
+      //-   .card__content-block
+      //-     h3.card__title 
+      //-       | Краска Wallquest, Brownsone MS90102
+      //-     .card__price 3400 ₽
+      //-     .card__btn-position
+      //-       button.card__btn.btnAdd

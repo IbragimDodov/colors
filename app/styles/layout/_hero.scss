@@ -1,0 +1,92 @@
+.hero {
+  color: white;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // perspective: 12px;
+  &__bg {
+    padding: 8rem 6.4rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    background-image: url(../../images/HG.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    // transform: translateZ(-5px) scale(2);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0b1d26 108.93%);
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__mountain {
+    position: absolute;
+    top: 50rem;
+    width: 100%;
+    height: 144.22rem;
+    background-image: url(../../images/MG.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    // transform: translateZ(3px) scale(0.75);
+  }
+  &__foreground {
+    position: absolute;
+    top: 90rem;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../images/VG.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    // transform: translateZ(5px) scale(0.6);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: url(../../images/BG_Content.svg);
+      background-size: cover;
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+  .heading {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%) ;
+    transform-style: preserve-3d;
+    z-index: 2;
+    &__subtitle {
+      color: $secondary-color;
+      font-family: $secondary-fonts;
+      font-weight: 400;
+    }
+    &__title {
+      font-size: $header-font-size;
+      line-height: 100px;
+      font-weight: 375;
+    }
+    &__guide {
+      font-family: $secondary-fonts;
+      display: flex;
+      gap: 5px;
+      font-weight: 400;
+    }
+  }
+}
