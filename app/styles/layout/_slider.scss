@@ -1,5 +1,6 @@
 .slider {
   margin-top: 110px;
+  position: relative;
   .slide {
     position: relative;
     & > img {
@@ -36,12 +37,19 @@
       width: 20px;
       height: 40px;
       position: absolute;
-      top: 334px;
-      right: 390px;
       background-color: transparent;
       outline: none;
       cursor: pointer;
       border: none;
+      &-next {
+        top: 334px;
+        right: 390px;
+      }
+      &-prev {
+        top: 334px;
+        right: 900px;
+        transform: rotate(180deg);
+      }
     }
     &__dots-wrapp {
       position: absolute;

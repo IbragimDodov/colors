@@ -2,6 +2,9 @@
   margin-top: 72px;
   padding-left: 64px;
   display: flex;
+  &__title-section {
+    display: none;
+  }
 }
 
 .aside {
@@ -192,13 +195,32 @@
 }
 
 .card {
-  width: 278px;
-  padding-bottom: 14px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 37.8rem;
+  // min-width: 18%;
+  max-width: 27.8rem;
+  padding-bottom: 1.4rem;
   border-bottom: 1px solid rgba( 0, 0, 0, 0.1);
-  margin-right: 6px;
-  margin-bottom: 10px;
+  margin-right: .6rem;
+  margin-bottom: 1rem;
   &:last-child {
     margin-right: 0;
+  }
+  &__image-block {
+    padding: 0px 0px 100% 0px;
+    overflow: hidden;
+    position: relative;
+    & > img {
+      position: absolute;
+      width: 100%;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      // height: 27.8rem;
+    }
   }
   &__title {
     font-weight: 300;
@@ -225,16 +247,13 @@
       position: absolute;
       bottom: -6px;
       right: 0;
+
       & > button {
         display: none;
       }
     }
   }
-  &:hover {
-    .card__btn-position > button {
-      display: block;
-    }
-  }
+  
 }
 
 .btnAdd {
@@ -242,8 +261,9 @@
   padding: 0;
   margin: 0;
   display: block;
-  width: 80px;
-  height: 32px;
+  width: 8rem;
+  height: 3.2rem;
+  
   background: #7BB899;
   border-radius: 8px;
   cursor: pointer;
@@ -286,4 +306,12 @@
     padding: 0;
     border: 0;
   }
+}
+
+.quantity {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #1F2020;
+  display: none;
 }

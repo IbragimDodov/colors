@@ -56,6 +56,9 @@
     }
   }
   .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &__list {
       display: flex;
       justify-content: center;
@@ -72,9 +75,6 @@
 }
 
 .cart-count {
-  position: absolute;
-  top: 5px;
-  left: 8px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -82,4 +82,28 @@
   text-transform: uppercase;
   color: #1F2020;
   cursor: pointer;
+}
+
+.nav {
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1F2020;
+  }
+}
+
+.toggle-btn {
+  display: none;
+}
+
+.toggle-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #1F2020;
+  margin: 4px 0px;
 }
