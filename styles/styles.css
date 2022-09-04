@@ -1,31 +1,4 @@
-@font-face {
-  font-family: "Gilroy";
-  src: url("../../fonts/Gilroy-Medium.woff2") format("woff2"), url("../../fonts/Gilroy-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("../../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../../fonts/Gilroy-ExtraBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("../../fonts/Gilroy-Bold.woff2") format("woff2"), url("../../fonts/Gilroy-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("../../fonts/Gilroy-Regular.woff2") format("woff2"), url("../../fonts/Gilroy-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
 html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
@@ -33,6 +6,7 @@ html {
 }
 
 body {
+  font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
 }
 
@@ -46,7 +20,7 @@ img {
 }
 
 body {
-  font-family: "Chronicle Display", sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1;
   color: white;
 }
@@ -81,7 +55,7 @@ body {
   align-items: center;
 }
 .header__nav > ul > li {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 400;
   cursor: pointer;
@@ -253,7 +227,7 @@ body {
 }
 .hero .heading__subtitle {
   color: #fbd784;
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
 .hero .heading__title {
@@ -262,7 +236,7 @@ body {
   font-weight: 375;
 }
 .hero .heading__guide {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Inter', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
