@@ -9,334 +9,244 @@ let cartFooter = document.getElementById('cart__footer');
 
 let cardsData = [
   {
-    id: 1,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "1.jpg",
-    price: "6000",
-    filterClasses: {
-      new: false,
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "1",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "1.jpg",
+    "price": "6000",
+    "filterClasses": {
+      "newClass": false,
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 1,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 2,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "2.png",
-    price: "4800",
-    filterClasses: {
-      new: false,
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "2",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "2.png",
+    "price": "4800",
+    "filterClasses": {
+      "newClass": false,
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 2,
-    inCart: 0
+    "popular": false,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 3,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "3.png",
-    price: "5290",
-    filterClasses: {
-      new: false,
-      available: false,
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "3",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "3.png",
+    "price": "5290",
+    "filterClasses": {
+      "newClass": false,
+      "available": false,
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: false,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 3,
-    inCart: 0
+    "popular": false,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 4,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "4.png",
-    price: "2800",
-    filterClasses: {
-      new: false,
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "4",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "4.png",
+    "price": "2800",
+    "filterClasses": {
+      "newClass": false,
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 4,
-    inCart: 0
+    "popular": false,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 5,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "5.png",
-    price: "3400",
-    filterClasses: {
-      new: "new",
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "5",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "5.png",
+    "price": "3400",
+    "filterClasses": {
+      "newClass": "new",
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: true,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 5,
-    inCart: 0
+    "popular": false,
+    "inCart": 0,
+    "filter": true
   },
   {
-    id: 6,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "6.png",
-    price: "6000",
-    filterClasses: {
-      new: false,
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "6",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "6.png",
+    "price": "6000",
+    "filterClasses": {
+      "newClass": false,
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 1,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 7,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "7.png",
-    price: "4800",
-    filterClasses: {
-      new: false,
-      available: false,
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "7",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "7.png",
+    "price": "4800",
+    "filterClasses": {
+      "newClass": false,
+      "available": false,
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: false,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 2,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 8,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "8.png",
-    price: "5290",
-    filterClasses: {
-      new: false,
-      available: false,
-      contract: false,
-      exclusive: false,
-      sale: false
+    "id": "8",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "8.png",
+    "price": "5290",
+    "filterClasses": {
+      "newClass": false,
+      "available": false,
+      "contract": false,
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: false,
-      contract: false,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 3,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 9,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "9.png",
-    price: "2800",
-    filterClasses: {
-      new: false,
-      available: "available",
-      contract: false,
-      exclusive: "exclusive",
-      sale: false
+    "id": "9",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "9.png",
+    "price": "2800",
+    "filterClasses": {
+      "newClass": false,
+      "available": "available",
+      "contract": false,
+      "exclusive": "exclusive",
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: true,
-      contract: false,
-      exclusive: true,
-      sale: false
-    },
-    raiting: 4,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 10,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "10.png",
-    price: "3400",
-    filterClasses: {
-      new: false,
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "10",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "10.png",
+    "price": "3400",
+    "filterClasses": {
+      "newClass": false,
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 5,
-    inCart: 0
+    "popular": false,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 11,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "1.jpg",
-    price: "6000",
-    filterClasses: {
-      new: false,
-      available: false,
-      contract: "contract",
-      exclusive: "exclusive",
-      sale: false
+    "id": "11",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "1.jpg",
+    "price": "6000",
+    "filterClasses": {
+      "newClass": false,
+      "available": false,
+      "contract": "contract",
+      "exclusive": "exclusive",
+      "sale": false
     },
-    filters: {
-      new: false,
-      available: false,
-      contract: true,
-      exclusive: true,
-      sale: false
-    },
-    raiting: 1,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 12,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "2.png",
-    price: "4800",
-    filterClasses: {
-      new: false,
-      available: false,
-      contract: "contract",
-      exclusive: false,
-      sale: "sale"
+    "id": "12",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "2.png",
+    "price": "4800",
+    "filterClasses": {
+      "newClass": false,
+      "available": false,
+      "contract": "contract",
+      "exclusive": false,
+      "sale": "sale"
     },
-    filters: {
-      new: false,
-      available: false,
-      contract: true,
-      exclusive: false,
-      sale: true
-    },
-    raiting: 1,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 13,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "6.png",
-    price: "5290",
-    filterClasses: {
-      new: false,
-      available: false,
-      contract: "contract",
-      exclusive: "exclusive",
-      sale: "sale"
+    "id": "13",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "6.png",
+    "price": "5290",
+    "filterClasses": {
+      "newClass": false,
+      "available": false,
+      "contract": "contract",
+      "exclusive": "exclusive",
+      "sale": "sale"
     },
-    filters: {
-      new: false,
-      available: false,
-      contract: true,
-      exclusive: true,
-      sale: true
-    },
-    raiting: 4,
-    inCart: 0
+    "popular": false,
+    "inCart": 0,
+    "filter": false
   },
   {
-    id: 14,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "4.png",
-    price: "2800",
-    filterClasses: {
-      new: "new",
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: false
+    "id": "14",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "4.png",
+    "price": "2800",
+    "filterClasses": {
+      "newClass": "new",
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": false
     },
-    filters: {
-      new: true,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: false
-    },
-    raiting: 5,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": true
   },
   {
-    id: 15,
-    title: "Краска Wallquest, Brownsone MS90102",
-    img: "8.png",
-    price: "3400",
-    filterClasses: {
-      new: "new",
-      available: "available",
-      contract: "contract",
-      exclusive: false,
-      sale: "sale"
+    "id": "15",
+    "title": "Краска Wallquest, Brownsone MS90102",
+    "img": "8.png",
+    "price": "3400",
+    "filterClasses": {
+      "newClass": "new",
+      "available": "available",
+      "contract": "contract",
+      "exclusive": false,
+      "sale": "sale"
     },
-    filters: {
-      new: true,
-      available: true,
-      contract: true,
-      exclusive: false,
-      sale: true
-    },
-    raiting: 3,
-    inCart: 0
+    "popular": true,
+    "inCart": 0,
+    "filter": true
   }
 ]
 
@@ -345,10 +255,11 @@ let basket = JSON.parse(localStorage.getItem('data')) || [];
 function generateCards () {
   return (cards.innerHTML = cardsData
     .map((card) => {
-      let {id, title, img, price} = card;
-      let search = basket.find(x => x.id === id) || [];
+      let {id, title, img, price, popular, filter, filterClasses: {newClass, available, contract, sale, exclusive}} = card;
+      console.log(card.filterClasses);
+      let search = basket.find(item => item.id === id) || [];
       return `
-        <div id="product-id-${id}" class="card cardId hover new" data-sort="6000" data-popular="true" data-new="true" data-filter="new">
+        <div id="product-id-${id}" class="card cardId hover ${newClass} ${available} ${contract} ${sale} ${exclusive}" data-price="${price}" data-sort="${price}" data-popular="${popular}" data-new="${filter}" data-filter="new">
           <div class="card__image-block"><img class="card__image" src="./images/cards/${img}" alt=${title} /></div>
           <div class="card__content-block">
             <h3 class="card__title">${title}</h3>
@@ -371,9 +282,10 @@ generateCards();
 
 let generateCartItems = () => {
   if (basket.length !== 0) {
-    return (cartBodyInner.innerHTML = basket.map(x => {
+    cartBodyInner.innerHTML = basket.map(x => {
       let {id, item} = x;
       let search = cardsData.find((y) => y.id === id) || [];
+      document.querySelector(".cart__body-descr").style.display = 'flex';
       return `
         <div class="cart__item">
           <img class="cart__item-img" src="./images/cards/${search.img}" alt="${search.title}" data-id="" />
@@ -391,10 +303,11 @@ let generateCartItems = () => {
         </div>
       `;
     })
-    .join(""))
+    .join("");
   } else {
     cartBody.style.color = 'black';
-    cartBody.innerHTML = `
+    document.querySelector(".cart__body-descr").style.display = 'none';
+    cartBodyInner.innerHTML = `
       <h2> The cart is empty </h2>
     `
   }
@@ -438,7 +351,6 @@ let decrement = (id) => {
 let update = (id) => {
   let search = basket.find(x => x.id === id);
   document.getElementById(id).innerHTML = search.item;
-  // console.log(search);
   calculation();
   totalAmount();
 };
@@ -456,6 +368,7 @@ let clearCart = () => {
   basket = [];
   generateCartItems();
   calculation();
+  totalAmount();
   localStorage.setItem('data', JSON.stringify(basket));
 }
 
@@ -470,7 +383,7 @@ let totalAmount = () => {
       <div class="count-block"><span>Итого</span><span class="totalCount">${amount} ₽</span></div>
       <button class="orderBtn">Оформить заказ</button>
     `
-  } else return;
+  } else cartFooter.innerHTML = ``;
 }
 totalAmount();
 
@@ -480,6 +393,218 @@ let calculation = () => {
 }
 
 calculation();
+
+
+  // show hide cart
+let cardsCount = document.querySelectorAll('.card');
+document.querySelector('.card-count').innerHTML = cardsCount.length + ' товаров';
+
+  // Полифил для метода forEach
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    thisArg = thisArg || window;
+    for (let i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  }
+
+
+  // dropdown
+  const dropdownFunc = () => {
+    // расчет ширины скроллбара
+    function calcScroll() {
+      let div = document.createElement('div');
+
+      div.style.width = '50px';
+      div.style.height = '50px';
+      div.style.overflowY = 'scroll';
+      div.style.visibility = 'hidden';
+
+      document.body.appendChild(div);
+      let scrollWidth = div.offsetWidth - div.clientWidth;
+      div.remove();
+
+      return scrollWidth;
+    }
+
+    document.querySelectorAll('.dropdown').forEach(function(el) {
+      const dropDownBtn = el.querySelector('.dropdown__button');
+      const dropDownList = el.querySelector('.dropdown__list');
+      const dropDownListWrap = el.querySelector('.dropdown__list-wrap');
+      const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+      const dropDownInput = el.querySelector('.dropdown__input');
+    
+      dropDownBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        dropDownList.classList.toggle('dropdown__list--visible');
+        dropDownBtn.style.display = 'none';
+        dropDownListWrap.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        document.body.style.marginRight = calcScroll()+"px";
+      });
+    
+      dropDownListItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.stopPropagation();
+          dropDownBtn.innerText = this.innerText;
+          dropDownInput.value = this.dataset.value;
+          closeDropDown();
+        });
+      })
+
+      const closeDropDown = () => {
+        dropDownList.classList.remove('dropdown__list--visible');
+        document.body.style.overflow = 'visible';
+        dropDownListWrap.style.display = 'none';
+        dropDownBtn.style.display = 'block';
+        document.body.style.marginRight = "";
+      };
+    
+      document.addEventListener('click', function(e) {
+        if (e.target !== dropDownBtn) {
+          closeDropDown();
+        }
+      })
+    
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { 
+          closeDropDown();
+        }
+      })
+    });
+  }
+  dropdownFunc();
+
+  // sort cards
+  document.querySelector('.dropdown__list-item[data-value="expensive"]').addEventListener('click', () => {
+    mySortDesc('data-price')
+  });
+  document.querySelector('.dropdown__list-item[data-value="cheap"]').addEventListener('click', () => {
+    mySortAsc('data-price')
+  });
+  document.querySelector('.dropdown__list-item[data-value="popular"]').addEventListener('click', () => {
+    mySortPopularAndNew('data-popular')
+  });
+  document.querySelector('.dropdown__list-item[data-value="new"]').addEventListener('click', () => {
+    mySortPopularAndNew('data-new')
+  });
+  
+
+
+  const mySortAsc = (sortType) => {
+    let cards = document.querySelector('.cards');
+
+    for (let i = 0; i < cards.children.length; i++) {
+      for (let j = i; j < cards.children.length; j++) {
+        // console.log(+cards.children[i].getAttribute(sortType));
+        if (+cards.children[i].getAttribute(sortType) > +cards.children[j].getAttribute(sortType)) {
+          let replacedNode = cards.replaceChild(cards.children[j], cards.children[i]);
+          insertAfter(replacedNode, cards.children[i]);
+        }
+      }
+    }
+  }
+  const mySortDesc = (sortType) => {
+    let cards = document.querySelector('.cards');
+
+    for (let i = 0; i < cards.children.length; i++) {
+      for (let j = i; j < cards.children.length; j++) {
+        if (+cards.children[i].getAttribute(sortType) < +cards.children[j].getAttribute(sortType)) {
+          let replacedNode = cards.replaceChild(cards.children[j], cards.children[i]);
+          insertAfter(replacedNode, cards.children[i]);
+        }
+      }
+    }
+  }
+
+  const mySortPopularAndNew = (sortType) => {
+    let cards = document.querySelector('.cards');
+
+    for (let i = 0; i < cards.children.length; i++) {
+      for (let j = i; j < cards.children.length; j++) {
+        if (cards.children[i].getAttribute(sortType) !== 'true') {
+          let replacedNode = cards.replaceChild(cards.children[j], cards.children[i]);
+          insertAfter(replacedNode, cards.children[i]);
+        }
+      }
+    }
+  }
+
+  const insertAfter = (elem, refElem) => {
+    return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
+  }
+
+
+  // filter cards
+  
+  const cardsFilter = () => {
+    let allButtons = document.querySelectorAll('.toggle-button');
+    
+    allButtons.forEach(button => {
+      button.addEventListener('change', cardsFilter);
+    })
+    
+    let models = getClassOfCheckedCheckboxes(allButtons)
+    filterResults(models);
+
+  }
+
+  cardsFilter();
+
+  function getClassOfCheckedCheckboxes(checkboxes) {
+    let classes = [];
+    
+    if (checkboxes && checkboxes.length > 0) {
+      for (let i = 0; i < checkboxes.length; i++) {
+        let cb = checkboxes[i];
+        if (cb.checked) {
+          classes.push(cb.dataset["filter"])
+          
+        }
+      }
+    }
+    return classes;
+  }
+  
+  function filterResults(models) {
+    let allCards = document.querySelectorAll('.card');
+    
+    let hiddenElems = [];
+    console.log(hiddenElems)
+    if (!allCards || allCards.length <= 0) {
+      return;
+    }
+    
+    for (let i = 0; i < allCards.length; i++) {
+      let card = allCards[i];
+      
+      if (models.length > 0) {
+        let isHidden = true;
+        
+        for (let j = 0; j < models.length; j++) {
+          let filter = models[j];
+          
+          if (card.classList.contains(filter)) {
+            isHidden = false;
+            break;
+          }
+        }
+        if (isHidden) {
+          hiddenElems.push(card)
+        }
+      }
+    }
+    
+    for (let i = 0; i < allCards.length; i++) {
+      allCards[i].style.display = "block"
+    }
+    if (hiddenElems.length <= 0) {
+      return;
+    }
+    for (let i = 0; i < hiddenElems.length; i++) {
+      hiddenElems[i].style.display = "none";
+    }
+    
+  }
 
 // show hide cart
 
@@ -498,7 +623,7 @@ document.querySelector('.cartBtn').addEventListener('click', () => {
 
 // slider
 
-const sliders = (slides, direction, prev, next) => {
+const sliders = (slides, prev, next) => {
   let slideIndex = 1;
   const items = document.querySelectorAll(slides);
 
@@ -511,7 +636,6 @@ const sliders = (slides, direction, prev, next) => {
     }
 
     items.forEach(item => {
-      item.classList.add("animated");
       item.style.display = "none";
     })
 
@@ -530,18 +654,18 @@ const sliders = (slides, direction, prev, next) => {
 
     prevBtn.addEventListener('click', () => {
       plusSlides(-1);
-      items[slideIndex - 1].classList.remove('slideInLeft');
-      items[slideIndex - 1].classList.add('slideInRight');
     })
     nextBtn.addEventListener('click', () => {
       plusSlides(1);
-      items[slideIndex - 1].classList.remove('slideInRight');
-      items[slideIndex - 1].classList.add('slideInLeft');
     })
   } catch (e) {
 
   }
 
+  setInterval(function() {
+    plusSlides(1);
+  }, 4000);
+
 }
 
-sliders();
+sliders('.slide', '.slide__arrow-prev', '.slide__arrow-next');

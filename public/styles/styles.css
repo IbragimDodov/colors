@@ -333,7 +333,7 @@ body {
 }
 .slider .slide__arrow-prev {
   top: 334px;
-  right: 900px;
+  left: 390px;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
