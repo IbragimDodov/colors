@@ -1,20 +1,30 @@
 .slider {
   margin-top: 110px;
   position: relative;
+
   .slide {
     display: none;
     position: relative;
-    & > img {
+
+    img {
       height: 560px;
-  
+      object-fit: cover;
+      object-position: top center;
+      margin: auto;
+      width: 100%;
+
+      @media (max-width: 768px) {
+
+      }
     }
+
     &__content {
       position: absolute;
-      
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      & > h1 {
+      
+      h1 {
         font-style: normal;
         font-weight: 400;
         font-size: 72px;
@@ -23,8 +33,13 @@
         color: #FFFFFF;
         text-align: center;
         margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+          font-size: 2em;
+        }
       }
-      & > p {
+
+      p {
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -32,6 +47,11 @@
         text-align: center;
         letter-spacing: 0.02em;
         color: #FFFFFF;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 0 3em;
       }
     }
     &__arrow {
@@ -42,14 +62,24 @@
       outline: none;
       cursor: pointer;
       border: none;
+      top: 50%;
+
       &-next {
-        top: 334px;
-        right: 390px;
+        right: 26%;
+        transform: translateY(-50%);
+
+        @media (max-width: 768px) {
+          right: 1em;
+        }
       }
+
       &-prev {
-        top: 334px;
-        left: 390px;
-        transform: rotate(180deg);
+        left: 26%;
+        transform: translateY(-50%)rotate(180deg);
+
+        @media (max-width: 768px) {
+          left: 1em;
+        }
       }
     }
     &__dots-wrapp {
