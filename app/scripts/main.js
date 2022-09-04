@@ -256,7 +256,7 @@ function generateCards () {
   return (cards.innerHTML = cardsData
     .map((card) => {
       let {id, title, img, price, popular, filter, filterClasses: {newClass, available, contract, sale, exclusive}} = card;
-      console.log(card.filterClasses);
+      
       let search = basket.find(item => item.id === id) || [];
       return `
         <div id="product-id-${id}" class="card cardId hover ${newClass} ${available} ${contract} ${sale} ${exclusive}" data-price="${price}" data-sort="${price}" data-popular="${popular}" data-new="${filter}" data-filter="new">
@@ -284,7 +284,8 @@ let generateCartItems = () => {
   if (basket.length !== 0) {
     cartBodyInner.innerHTML = basket.map(x => {
       let {id, item} = x;
-      let search = cardsData.find((y) => y.id === id) || [];
+      let search = cardsData.find((y) => y.id == id) || [];
+      // console.log(cardsData.find((y) => y.id == id))
       document.querySelector(".cart__body-descr").style.display = 'flex';
       return `
         <div class="cart__item">
@@ -376,7 +377,8 @@ let totalAmount = () => {
   if (basket.length !== 0) {
     let amount = basket.map((x) => {
       let {item, id} = x;
-      let search = cardsData.find((y) => y.id === id) || [];
+      let search = cardsData.find((y) => y.id == id) || [];
+      console.log(search)
       return item * search.price;
     }).reduce((x, y) => x + y, 0);
     cartFooter.innerHTML = `
@@ -389,8 +391,18 @@ totalAmount();
 
 let calculation = () => {
   let cartIcon = document.getElementById('cart-count');
-  cartIcon.innerHTML = basket.map(x => x.item).reduce((x, y) => x + y, 0);
+  let cartCoutItems = document.querySelector('.cart__body-title');
+  let countItems = basket.map(x => x.item).reduce((x, y) => x + y, 0);
+  cartIcon.innerHTML = countItems;
+  cartCoutItems.innerHTML = countItems + " " + declOfNum(countItems, ['товар', 'товара', 'товаров']);
+
 }
+
+function declOfNum(number, titles) {  
+  cases = [2, 0, 1, 1, 1, 2];  
+  return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
+}
+
 
 calculation();
 
@@ -569,7 +581,6 @@ document.querySelector('.card-count').innerHTML = cardsCount.length + ' това
     let allCards = document.querySelectorAll('.card');
     
     let hiddenElems = [];
-    console.log(hiddenElems)
     if (!allCards || allCards.length <= 0) {
       return;
     }
@@ -623,49 +634,106 @@ document.querySelector('.cartBtn').addEventListener('click', () => {
 
 // slider
 
-const sliders = (slides, prev, next) => {
-  let slideIndex = 1;
-  const items = document.querySelectorAll(slides);
+const prev = document.querySelector('.slide__arrow.slide__arrow-prev'),
+      next = document.querySelector('.slide__arrow.slide__arrow-next'),
+      slides = document.querySelectorAll('.slide'),
+      dots = document.querySelectorAll('.slide__dot');
 
-  function showSlides(n) {
-    if (n > items.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = items.length;
-    }
+let index = 0;
 
-    items.forEach(item => {
-      item.style.display = "none";
-    })
-
-    items[slideIndex - 1].style.display = "block";
+const activeSlide = n => {
+  for (item of slides) {
+    item.classList.remove('activeBlock');
   }
-
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  try {
-    const prevBtn = document.querySelector(prev),
-          nextBtn = document.querySelector(next);
-
-    prevBtn.addEventListener('click', () => {
-      plusSlides(-1);
-    })
-    nextBtn.addEventListener('click', () => {
-      plusSlides(1);
-    })
-  } catch (e) {
-
-  }
-
-  setInterval(function() {
-    plusSlides(1);
-  }, 4000);
-
+  slides[n].classList.add('activeBlock');
 }
 
-sliders('.slide', '.slide__arrow-prev', '.slide__arrow-next');
+const activeDot = n => {
+  for (slideDot of dots) {
+    slideDot.classList.remove('active');
+  }
+  dots[n].classList.add('active');
+}
+
+const nextSlide = () => {
+  if (index == slides.length - 1) {
+    index = 0;
+    activeSlide(index);
+    activeDot(index);
+  } else {
+    index++;
+    activeSlide(index);
+    activeDot(index);
+  }
+}
+
+const prevSlide = () => {
+  if (index == 0) {
+    index = slides.length - 1;
+    activeSlide(index);
+  } else {
+    index--;
+    activeSlide(index);
+  }
+}
+
+dots.forEach((item, indexDot) => {
+  item.addEventListener('click', () => {
+    index = indexDot;
+    activeSlide(index);
+    activeDot(index);
+  })
+})
+
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);
+
+setInterval(nextSlide, 4000)
+
+// const sliders = (slides, prev, next, dots) => {
+//   let slideIndex = 1;
+//   const items = document.querySelectorAll(slides);
+//   const slideDots = document.querySelectorAll(dots);
+
+//   function showSlides(n) {
+//     if (n > items.length) {
+//       slideIndex = 1;
+//     }
+//     if (n < 1) {
+//       slideIndex = items.length;
+//     }
+
+//     items.forEach(item => {
+//       item.style.display = "none";
+//     })
+
+//     items[slideIndex - 1].style.display = "block";
+//   }
+
+//   showSlides(slideIndex);
+
+//   function plusSlides(n) {
+//     showSlides(slideIndex += n);
+//   }
+
+//   try {
+//     const prevBtn = document.querySelector(prev),
+//           nextBtn = document.querySelector(next);
+
+//     prevBtn.addEventListener('click', () => {
+//       plusSlides(-1);
+//     })
+//     nextBtn.addEventListener('click', () => {
+//       plusSlides(1);
+//     })
+//   } catch (e) {
+
+//   }
+
+//   setInterval(function() {
+//     plusSlides(1);
+//   }, 4000);
+
+// }
+
+// sliders('.slide', '.slide__arrow-prev', '.slide__arrow-next');

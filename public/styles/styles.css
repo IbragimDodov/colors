@@ -287,6 +287,7 @@ body {
   position: relative;
 }
 .slider .slide {
+  display: none;
   position: relative;
 }
 .slider .slide > img {
@@ -376,6 +377,10 @@ body {
 .slider .slide__dot.active {
   background-color: #fff;
   opacity: 1;
+}
+
+.slide.activeBlock {
+  display: block;
 }
 
 .main {
@@ -725,7 +730,7 @@ body {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     padding: 21px 24px 22px;

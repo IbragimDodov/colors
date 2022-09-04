@@ -2,6 +2,7 @@
   margin-top: 110px;
   position: relative;
   .slide {
+    display: none;
     position: relative;
     & > img {
       height: 560px;
@@ -85,4 +86,8 @@
       }
     }
   }
+}
+
+.slide.activeBlock {
+  display: block;
 }
