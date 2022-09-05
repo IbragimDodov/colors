@@ -1,19 +1,67 @@
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .main {
   margin-top: 72px;
   padding-left: 64px;
   display: flex;
+
+  &__section {
+    width: 85%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
   &__title-section {
     display: none;
+  }
+
+  &__section-filter-block {
+    h3 {
+      display: none;
+  
+      @media (max-width: 768px) {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #1F2020;
+      }
+    }
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+  }
+
+  @media (max-width: 1200px) {
+    padding-left: 14px;
+  }
+  @media (max-width: 375px) {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
 .aside {
   width: 15%;
+  min-width: 185px;
   &__filter-buttons {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
@@ -31,6 +79,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #1F2020;
+
+    @media (max-width: 1200px) {
+      margin-left: 2px;
+    }
   }
 }
 
@@ -75,12 +127,6 @@
   }
 }
 
-
-
-.main__section {
-  width: 85%;
-}
-
 .card-count {
   font-weight: 500;
   font-size: 12px;
@@ -88,6 +134,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #1F2020;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .sort {
@@ -103,6 +153,10 @@
   position: relative;
   width: 280px;
   max-height: 198px;
+
+  @media (max-width: 768px) {
+    width: 185px;
+  }
   &__button {
     padding-right: 14px;
     position: relative;
@@ -191,6 +245,9 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  @media (max-width: 320px) {
+    justify-content: center;
+  }
   
 }
 
@@ -253,7 +310,32 @@
       }
     }
   }
-  
+  @media (max-width: 768px) {
+    max-width: 25rem;
+  }
+  @media (max-width: 376px) {
+    max-width: 14.6rem;
+    margin-right: 15px;
+    padding-bottom: 34px;
+  }
+  @media (max-width: 320px) {
+    max-width: 30rem;
+    padding-bottom: 14px;
+  }
+}
+
+@media (min-width: 376px) {
+  .main {
+    .cards {
+      .card {
+        &.hover:hover {
+          .card__btn-position > button {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }
 
 .btnAdd {

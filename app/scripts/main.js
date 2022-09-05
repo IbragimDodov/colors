@@ -247,7 +247,7 @@ let cardsData = [
     "popular": true,
     "inCart": 0,
     "filter": true
-  }
+  },
 ]
 
 let basket = JSON.parse(localStorage.getItem('data')) || [];
@@ -407,9 +407,9 @@ function declOfNum(number, titles) {
 calculation();
 
 
-  // show hide cart
+  // count cards
 let cardsCount = document.querySelectorAll('.card');
-document.querySelector('.card-count').innerHTML = cardsCount.length + ' товаров';
+document.querySelector('.card-count').innerHTML = cardsCount.length + ' ' + declOfNum(cardsCount.length, ['товар', 'товара', 'товаров']);
 
   // Полифил для метода forEach
   if (window.NodeList && !NodeList.prototype.forEach) {
@@ -690,50 +690,30 @@ prev.addEventListener('click', prevSlide);
 
 setInterval(nextSlide, 4000)
 
-// const sliders = (slides, prev, next, dots) => {
-//   let slideIndex = 1;
-//   const items = document.querySelectorAll(slides);
-//   const slideDots = document.querySelectorAll(dots);
+// hamburger menu
 
-//   function showSlides(n) {
-//     if (n > items.length) {
-//       slideIndex = 1;
-//     }
-//     if (n < 1) {
-//       slideIndex = items.length;
-//     }
+const hamburger = document.querySelector('.menu-btn');
+const nav = document.querySelector('.nav');
+const navMenu = document.querySelector('.nav__list');
 
-//     items.forEach(item => {
-//       item.style.display = "none";
-//     })
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle("display-block");
+  navMenu.classList.toggle("display-block");
+  nav.classList.toggle("display-block");
+})
+document.querySelectorAll('.nav__item').forEach(item => {
+  item.addEventListener('click', () => {
+    navMenu.classList.toggle("display-block");
+    nav.classList.toggle("display-block");
+  });
+})
 
-//     items[slideIndex - 1].style.display = "block";
-//   }
+// mobile filter toggle
 
-//   showSlides(slideIndex);
+document.querySelector('.main__section-filter-link').addEventListener('click', () => {
+  document.querySelector('.aside').style.display = 'block';
+  document.querySelector('.aside').addEventListener('click', (e) => {
+    document.querySelector('.aside').style.display = 'none';
+  })
 
-//   function plusSlides(n) {
-//     showSlides(slideIndex += n);
-//   }
-
-//   try {
-//     const prevBtn = document.querySelector(prev),
-//           nextBtn = document.querySelector(next);
-
-//     prevBtn.addEventListener('click', () => {
-//       plusSlides(-1);
-//     })
-//     nextBtn.addEventListener('click', () => {
-//       plusSlides(1);
-//     })
-//   } catch (e) {
-
-//   }
-
-//   setInterval(function() {
-//     plusSlides(1);
-//   }, 4000);
-
-// }
-
-// sliders('.slide', '.slide__arrow-prev', '.slide__arrow-next');
+})

@@ -1,41 +1,70 @@
-// .slider-wrapper {
-//   margin-top: 110px;
-// }
 .slider {
-  padding-top: 110px;
-  // margin-top: 110px;
   position: relative;
+
+  &>* {
+    z-index: 2;
+  }
 
   .slide {
     width: 100%;
-    max-width: 1920px;
-    height: 56rem;
     display: none;
     position: relative;
+    min-height: 560px;
+    padding-top: 1em;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      min-height: 360px;
+    }
+
+    &.activeBlock {
+      display: flex;
+    }
 
     img {
-      // height: 100%;
-      object-fit: contain;
-      // object-position: top center;
-      margin: auto;
+      object-fit: cover;
+      object-position: 10% center;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
       width: 100%;
+      margin: auto;
+      z-index: 1;
 
-      @media (max-width: 768px) {
-
-      }
+      // @media (max-width: 768px) {
+      //   height: 200px;
+      // }
     }
 
     &__content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      padding: 0 2em;
+      margin: 0 auto;
+
+      // @media (max-width: 1200px) {
+      //   max-width: 800px;
+      // }
+
+      @media (max-width: 1024px) {
+        max-width: 800px;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 600px;
+        padding: 0 1em;
+      }
       
       h1 {
         font-style: normal;
         font-weight: 400;
         font-size: clamp(4rem, 10vw, 7.2rem);
-        line-height: 88%;
+        line-height: 0.9;
         letter-spacing: -0.02em;
         color: #FFFFFF;
         text-align: center;
@@ -62,8 +91,11 @@
       }
     }
     &__arrow {
-      width: 20px;
-      height: 40px;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       background-color: transparent;
       outline: none;
@@ -71,21 +103,30 @@
       border: none;
       top: 66.86%;
 
+      @media (max-width: 768px) {
+        width: 40px;
+        height: 40px;
+      }
+
+      img {
+        height: 50%;  
+      }
+
       &-next {
         right: 20.31%;
         transform: translateY(-50%);
 
-        @media (max-width: 1600px) {
-          right: 10.31%;
-        }
-        @media (max-width: 1340px) {
-          right: -10.69%;
-        }
-        @media (max-width: 1050px) {
-          right: -20.69%;
-        }
+        // @media (max-width: 1600px) {
+        //   right: 10.31%;
+        // }
+        // @media (max-width: 1340px) {
+        //   right: -10.69%;
+        // }
+        // @media (max-width: 1050px) {
+        //   right: -20.69%;
+        // }
         @media (max-width: 768px) {
-          right: -60.69%;
+          right: 5%;
         }
       }
 
@@ -93,17 +134,17 @@
         left: 20.31%;
         transform: translateY(-50%)rotate(180deg);
 
-        @media (max-width: 1600px) {
-          left: 30.31%;
-        }
-        @media (max-width: 1340px) {
-          left: 40.31%;
-        }
-        @media (max-width: 1050px) {
-          left: 63.31%;
-        }
+        // @media (max-width: 1600px) {
+        //   left: 30.31%;
+        // }
+        // @media (max-width: 1340px) {
+        //   left: 40.31%;
+        // }
+        // @media (max-width: 1050px) {
+        //   left: 63.31%;
+        // }
         @media (max-width: 768px) {
-          left: 88.31%;
+          left: 5%;
         }
         
       }
@@ -114,18 +155,18 @@
       left: 50%;
       transform: translate(-50%);
 
-      @media (max-width: 1600px) {
-        left: 60%;
-      }
-      @media (max-width: 1340px) {
-        left: 72%;
-      }
-      @media (max-width: 1050px) {
-        left: 91%;
-      }
-      @media (max-width: 768px) {
-        left: 125%;
-      }
+      // @media (max-width: 1600px) {
+      //   left: 60%;
+      // }
+      // @media (max-width: 1340px) {
+      //   left: 72%;
+      // }
+      // @media (max-width: 1050px) {
+      //   left: 91%;
+      // }
+      // @media (max-width: 768px) {
+      //   left: 125%;
+      // }
     }
     &__dots {
       display: flex;
@@ -155,8 +196,4 @@
       }
     }
   }
-}
-
-.slide.activeBlock {
-  display: block;
 }

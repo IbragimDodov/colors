@@ -1,31 +1,25 @@
 
+@media (max-width: 992px) {
+  
+  .nav__list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    background-color: #7BB899;
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+  }
+  .nav__item {
+    margin: 16px 0;
+  }
+
+}
+
+
 
 @media (max-width: 376px) {
-  .header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 21px 24px 22px;
-    &__nav {
-      display: none;
-    }
-    &__contacts {
-      display: none;
-    }
-    .contacts {
-      display: none;
-    }
-    .profile__list {
-      display: none;
-    }
-    .logo__icon {
-      width: 100px;
-    }
-    .cartBtn {
-      margin-left: 0;
-    }
-    .toggle-btn {
-      display: block;
-    }
-  }
 
   .slider {
     display: none;
@@ -38,14 +32,10 @@
     flex-direction: column;
     flex-wrap: wrap;
 
-    margin-top: 72px;
-    padding-left: 0;
+    margin-top: 16px;
 
     .cards {
       .card {
-        max-width: 14.6rem;
-        margin-right: 15px;
-        padding-bottom: 34px;
         &:nth-child(even) {
           margin-right: 0;
         }
@@ -125,11 +115,6 @@
         color: #1F2020;
       }
     }
-    .aside {
-      &__filter-buttons {
-        display: none;
-      }
-    }
     &__section {
       &-filter-block {
         margin-bottom: 24px;
@@ -164,7 +149,38 @@
       }
     }
   }
-
+  .aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    z-index: 5;
+    .aside__filter-buttons {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 375px;
+      background-color: #fff;
+      padding-top: 54px;
+      padding-left: 24px;
+      border-radius: 24px 24px 0px 0px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 28px;
+        height: 4px;
+        background: #1F2020;
+        opacity: 0.6;
+        border-radius: 40px;
+      }
+    }
+  }
   .btnAdd {
     display: block;
     position: relative;
@@ -186,22 +202,6 @@
       top: 3px;
       right: 9px;
 
-    }
-  }
-
-  
-}
-
-@media (min-width: 376px) {
-  .main {
-    .cards {
-      .card {
-        &.hover:hover {
-          .card__btn-position > button {
-            display: block;
-          }
-        }
-      }
     }
   }
 }
